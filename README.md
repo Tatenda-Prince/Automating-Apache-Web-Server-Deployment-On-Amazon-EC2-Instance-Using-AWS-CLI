@@ -142,7 +142,7 @@ sudo vim [script_name.sh]
 
 Use retrieved and created resource info to launch EC2 Web Server
 
-efer back to all the retrieved and created resource information from step 2. We will now use them, along with our bash script, to finally launch our EC2 Apache Web Server.
+Refer back to all the retrieved and created resource information from step 2. We will now use them, along with our bash script, to finally launch our EC2 Apache Web Server.
 
 To launch our EC2 Web Server, run the following command —
 
