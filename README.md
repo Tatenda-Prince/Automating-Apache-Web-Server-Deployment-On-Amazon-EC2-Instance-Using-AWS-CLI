@@ -84,7 +84,7 @@ To allow “http” on port 80, run the following command —
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ea02dd0d012815c6491407c1a869f58f7bcd48b8/Images/Screenshot%202024-12-23%20154800.png)
 
 
 Verify that the ports are configured correctly by navigating to your VPCs Security Groups Inbound rules in the AWS Management Console. You should see the newly configured open ports, as seen below.
