@@ -46,6 +46,19 @@ aws ec2 describe-vpcs
 
 Your screen should display the current configurations of your VPCs. Locate and note the “VpcId” of the VPC where you will launch the EC2 Instance, as seen below.
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/8d244c3c8c937c59c2387f9622c9996d5449378a/Images/Screenshot%202024-12-23%20153836.png)
+
+# Create new Security Group in VPC
+
+We need to create a new Security Group in our VPC to use with our EC2 Instance to have control of the network traffic flowing in and out of it. To successfully run this command, we’ll need to provide the information of the group name, group description and VPC ID retrieved from our previous command.
+
+To create a new Security group, run the following command —
+
+aws ec2 create-security-group --group-name [group_name] --description "[group_description]"
+--vpc-id [vpc_id]
+
+Copy and save the Security Group ID displayed in your Linux CLI after running the command, as seen below.
+
 ![image alt]()
 
 
