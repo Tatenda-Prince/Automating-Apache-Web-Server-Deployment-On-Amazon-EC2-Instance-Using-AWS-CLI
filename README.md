@@ -161,7 +161,7 @@ Now verify that the EC2 Instance was created by navigating to the EC2 Instance d
 Retrieve the public IP Address of the EC2 Instance from the Amazon EC2 dashboard “Networking” tab, copy and paste it in the address bar of your preferred browser, then hit “enter” on your keyboard. Your browser should display the Apache Web Server default Webpage, as seen below.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/4e63b670f158ac0c98c213c7e1ef7ca1dc68c395/Images/Screenshot%202024-12-23%20163608.png)
 
 Success!
 You just completed the “Saving Time with AWS CLI” task! You can now show your engineer colleagues how to be more efficient and automate an Apache Web Server deployment on an Amazon EC2 Instance using the AWS CLI.
