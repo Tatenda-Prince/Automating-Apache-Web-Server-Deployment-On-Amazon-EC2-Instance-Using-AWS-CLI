@@ -59,7 +59,33 @@ aws ec2 create-security-group --group-name [group_name] --description "[group_de
 
 Copy and save the Security Group ID displayed in your Linux CLI after running the command, as seen below.
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/6579c14cf621c8c58021e0c021473a50089d1122/Images/Screenshot%202024-12-23%20154204.png)
+
+
+You can also verify that the Security Group was created by heading over to the AWS Management Console. As seen below, the new Security Group named “proj4cli” has been created.
+
 ![image alt]()
+
+
+# Configure inbound (ingress) Firewall rules to the Security Group
+
+
+We need to allow “ssh” traffic on port 22, so we have the capability to securely connect into our EC2 Instance to perform tasks. We also need to allow “http” traffic on port 80, to allow us to connect to the EC2 instance over the internet on our browser and request/be served data to view our Website.
+
+To allow “ssh” on port 22, run the following command —
+
+aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+
+To allow “http” on port 80, run the following command —
+
+aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+
+Verify that the ports are configured correctly by navigating to your VPCs Security Groups Inbound rules in the AWS Management Console. You should see the newly configured open ports, as seen below.
+
+![image alt]()
+
 
 
 
