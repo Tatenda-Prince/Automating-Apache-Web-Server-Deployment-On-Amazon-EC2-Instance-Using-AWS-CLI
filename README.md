@@ -102,10 +102,14 @@ aws ec2 create-key-pair --key-name [group_name]
 Verify that the key pair has been created by running the following command to view it —
 
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ed0a1dea48c1ad37c9a7a5ffc9c34bbdc87196de/Images/Screenshot%202024-12-23%20155032.png)
+
+
+# Get Amazon Machine Image (AMI) ID
+
+We will use the Amazon Linux 2 AMI which is part of the AWS free tier. To locate the AMI ID, navigate to the EC2 Instance dashboard in the AWS Management Console, click on “AMI Catalog” then copy and save the AMI ID of the Amazon Linux 2 AMI, as seen below.
+
 ![image alt]()
-
-
-# 
 
 
 
