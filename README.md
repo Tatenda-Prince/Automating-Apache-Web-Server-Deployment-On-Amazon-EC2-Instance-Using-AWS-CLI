@@ -76,10 +76,13 @@ To allow “ssh” on port 22, run the following command —
 
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/98aab621957e215030a8787a86cb9a17d9e486e2/Images/Screenshot%202024-12-23%20154541.png)
 
 
+
 To allow “http” on port 80, run the following command —
+
 
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
 
@@ -87,9 +90,12 @@ aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protoc
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ea02dd0d012815c6491407c1a869f58f7bcd48b8/Images/Screenshot%202024-12-23%20154800.png)
 
 
+
 Verify that the ports are configured correctly by navigating to your VPCs Security Groups Inbound rules in the AWS Management Console. You should see the newly configured open ports, as seen below.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/c0f25c08c17175b64dd901da6d67783c6dd83c04/Images/Screenshot%202024-12-23%20154846.png)
+
 
 # Create an SSH Key Pair
 
@@ -147,7 +153,7 @@ Press q to exit out of the outputted info screen.
 
 Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
 
-![image alt]( )
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/73fef60aeb6317a7b775bb66d019bacbf960c2a5/Images/Screenshot%202024-12-23%20163601.png )
 
 
 # Step 4: Connect to your EC2 Instance running Apache Web Server through browser
