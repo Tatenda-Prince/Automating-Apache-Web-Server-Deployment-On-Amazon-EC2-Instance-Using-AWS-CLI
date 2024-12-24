@@ -109,7 +109,29 @@ Verify that the key pair has been created by running the following command to vi
 
 We will use the Amazon Linux 2 AMI which is part of the AWS free tier. To locate the AMI ID, navigate to the EC2 Instance dashboard in the AWS Management Console, click on “AMI Catalog” then copy and save the AMI ID of the Amazon Linux 2 AMI, as seen below.
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/8edf7ce94e1feb3314ddd153e72858f51160226a/Images/Screenshot%202024-12-24%20191506.png)
+
+We’ve now collected all the resource information needed to launch the configured EC2 Instance from the AWS CLI, namely our VPC ID, AMI ID Security Group ID and Key Pair Name.
+
+Now let’s progress onto step 2.
+
+# Step 2: Create script for bootstrapping EC2 Instance
+
+We need to install an Apache Web Server on our EC2 Instance to enable it to serve HTTP content over the internet to our browsers. To accomplish this, we have to create a bash script to install, enable and start an Apache Web Server through bootstrapping the EC2 Instance. Bootstrapping refers to the process of adding scripts to an EC2 Instance’s user data to be executed when the instance starts.
+
+mkdir [directory_name]
+
+
+cd [directory_name]
+
+# Create bash script
+
+sudo vim [script_name.sh]
+
+
 ![image alt]()
+
+
 
 
 
