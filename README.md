@@ -76,10 +76,15 @@ To allow “ssh” on port 22, run the following command —
 
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
 
+![image alt]()
+
 
 To allow “http” on port 80, run the following command —
 
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+
+![image alt]()
 
 
 Verify that the ports are configured correctly by navigating to your VPCs Security Groups Inbound rules in the AWS Management Console. You should see the newly configured open ports, as seen below.
