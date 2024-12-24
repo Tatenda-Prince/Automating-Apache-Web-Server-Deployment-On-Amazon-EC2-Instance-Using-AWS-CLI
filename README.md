@@ -91,6 +91,26 @@ Verify that the ports are configured correctly by navigating to your VPCs Securi
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/c0f25c08c17175b64dd901da6d67783c6dd83c04/Images/Screenshot%202024-12-23%20154846.png)
 
+# Create an SSH Key Pair
+
+aws ec2 create-key-pair --key-name [group_name]
+
+
+![image alt]()
+
+
+Verify that the key pair has been created by running the following command to view it —
+
+
+![image alt]()
+
+
+# 
+
+
+
+
+
 
 
 
