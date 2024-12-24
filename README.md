@@ -129,7 +129,39 @@ cd [directory_name]
 sudo vim [script_name.sh]
 
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/4e0d667c40384a2fb79f2f9851ae866cb057e9b5/Images/Screenshot%202024-12-23%20160258.png)
+
+
+# Step 3: Launch EC2 Web Server with t2.micro instance type bootstrapped with bash script
+
+Use retrieved and created resource info to launch EC2 Web Server
+
+efer back to all the retrieved and created resource information from step 2. We will now use them, along with our bash script, to finally launch our EC2 Apache Web Server.
+
+To launch our EC2 Web Server, run the following command —
+
+aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]
+
+
+Press q to exit out of the outputted info screen.
+
+Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
+
+![image alt]( )
+
+
+# Step 4: Connect to your EC2 Instance running Apache Web Server through browser
+
+Retrieve the public IP Address of the EC2 Instance from the Amazon EC2 dashboard “Networking” tab, copy and paste it in the address bar of your preferred browser, then hit “enter” on your keyboard. Your browser should display the Apache Web Server default Webpage, as seen below.
+
+
 ![image alt]()
+
+Success!
+You just completed the “Saving Time with AWS CLI” task! You can now show your engineer colleagues how to be more efficient and automate an Apache Web Server deployment on an Amazon EC2 Instance using the AWS CLI.
+
+
+
 
 
 
