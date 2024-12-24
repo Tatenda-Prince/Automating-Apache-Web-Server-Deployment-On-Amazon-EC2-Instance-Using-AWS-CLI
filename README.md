@@ -89,7 +89,7 @@ aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protoc
 
 Verify that the ports are configured correctly by navigating to your VPCs Security Groups Inbound rules in the AWS Management Console. You should see the newly configured open ports, as seen below.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/c0f25c08c17175b64dd901da6d67783c6dd83c04/Images/Screenshot%202024-12-23%20154846.png)
 
 
 
