@@ -96,7 +96,7 @@ Verify that the ports are configured correctly by navigating to your VPCs Securi
 aws ec2 create-key-pair --key-name [group_name]
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/373b8732f5f34ab8be5942e48d4f0be07a1c4bac/Images/Screenshot%202024-12-23%20155026.png)
 
 
 Verify that the key pair has been created by running the following command to view it —
