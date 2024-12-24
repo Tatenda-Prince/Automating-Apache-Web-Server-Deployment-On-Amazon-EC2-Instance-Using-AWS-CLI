@@ -76,7 +76,7 @@ To allow “ssh” on port 22, run the following command —
 
 aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/98aab621957e215030a8787a86cb9a17d9e486e2/Images/Screenshot%202024-12-23%20154541.png)
 
 
 To allow “http” on port 80, run the following command —
