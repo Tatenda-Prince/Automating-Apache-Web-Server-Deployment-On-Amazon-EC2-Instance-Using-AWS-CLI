@@ -137,7 +137,7 @@ We need to install an Apache Web Server on our EC2 Instance to enable it to serv
 sudo vim [script_name.sh]
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/fe86286a86512100011d4ce0ba74136e5529fbed/Images/Screenshot%202025-01-03%20154639.png)
 
 
 # Step 3: Launch EC2 Web Server with t2.micro instance type bootstrapped with bash script
