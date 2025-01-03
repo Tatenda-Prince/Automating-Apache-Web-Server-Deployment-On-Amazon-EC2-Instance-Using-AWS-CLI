@@ -127,17 +127,17 @@ Now let’s progress onto step 2.
 
 We need to install an Apache Web Server on our EC2 Instance to enable it to serve HTTP content over the internet to our browsers. To accomplish this, we have to create a bash script to install, enable and start an Apache Web Server through bootstrapping the EC2 Instance. Bootstrapping refers to the process of adding scripts to an EC2 Instance’s user data to be executed when the instance starts.
 
-mkdir [directory_name]
+1.mkdir [directory_name]
 
 
-cd [directory_name]
+2. cd [directory_name]
 
 # Create bash script
 
 sudo vim [script_name.sh]
 
 
-![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/4e0d667c40384a2fb79f2f9851ae866cb057e9b5/Images/Screenshot%202024-12-23%20160258.png)
+![image alt]()
 
 
 # Step 3: Launch EC2 Web Server with t2.micro instance type bootstrapped with bash script
@@ -155,7 +155,7 @@ Press q to exit out of the outputted info screen.
 
 Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
 
-![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/73fef60aeb6317a7b775bb66d019bacbf960c2a5/Images/Screenshot%202024-12-23%20163601.png )
+![image alt]( )
 
 
 # Step 4: Connect to your EC2 Instance running Apache Web Server through browser
@@ -163,7 +163,7 @@ Now verify that the EC2 Instance was created by navigating to the EC2 Instance d
 Retrieve the public IP Address of the EC2 Instance from the Amazon EC2 dashboard “Networking” tab, copy and paste it in the address bar of your preferred browser, then hit “enter” on your keyboard. Your browser should display the Apache Web Server default Webpage, as seen below.
 
 
-![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/4e63b670f158ac0c98c213c7e1ef7ca1dc68c395/Images/Screenshot%202024-12-23%20163608.png)
+![image alt]()
 
 # YAY Success!
 
