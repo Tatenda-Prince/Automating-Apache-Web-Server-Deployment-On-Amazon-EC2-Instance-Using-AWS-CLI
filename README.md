@@ -64,7 +64,7 @@ Copy and save the Security Group ID displayed in your Linux CLI after running th
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/6579c14cf621c8c58021e0c021473a50089d1122/Images/Screenshot%202024-12-23%20154204.png)
 
 
-You can also verify that the Security Group was created by heading over to the AWS Management Console. As seen below, the new Security Group named “proj4cli” has been created.
+You can also verify that the Security Group was created by heading over to the AWS Management Console. As seen below, the new Security Group named “tatenda4cli” has been created.
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/837d5bb438afb38af4994eda371c8cc0a311c2ce/Images/Screenshot%202024-12-23%20154318.png)
 
