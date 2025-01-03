@@ -155,7 +155,7 @@ Press q to exit out of the outputted info screen.
 
 Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
 
-![image alt]( )
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/172c51c6bd13a2e97953f8cafd1a3f940beeab0b/Images/Screenshot%202025-01-03%20154706.png)
 
 
 # Step 4: Connect to your EC2 Instance running Apache Web Server through browser
