@@ -14,7 +14,7 @@ As a Cloud Engineer, part of your main task is to help your organization operate
 
 # Use Case
 
-You’ve just been hired as a Cloud Engineer for the Up The ChELS organization. You notice the current engineers regularly use the AWS Management Console to accomplish tasks managing AWS resources. You also realize that they tend to run repetitive tasks, involving Linux commands, one at a time in the command line. You want to show them a more efficient way to automate daily processes like launching an Amazon EC2 web server. You decide to practice the steps yourself first before showing them how they can also.
+You’ve just been hired as a Cloud Engineer for the Up The Chels organization. You notice the current engineers regularly use the AWS Management Console to accomplish tasks managing AWS resources. You also realize that they tend to run repetitive tasks, involving Linux commands, one at a time in the command line. You want to show them a more efficient way to automate daily processes like launching an Amazon EC2 web server. You decide to practice the steps yourself first before showing them how they can also.
 
 # Prerequisites
 
