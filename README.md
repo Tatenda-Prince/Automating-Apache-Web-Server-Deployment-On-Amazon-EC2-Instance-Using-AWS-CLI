@@ -151,7 +151,7 @@ To launch our EC2 Web Server, run the following command —
 aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]
 
 
-Press q to exit out of the outputted info screen.
+Press "Shift:wq!" to exit out of the outputted info screen.
 
 Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
 
@@ -163,7 +163,7 @@ Now verify that the EC2 Instance was created by navigating to the EC2 Instance d
 Retrieve the public IP Address of the EC2 Instance from the Amazon EC2 dashboard “Networking” tab, copy and paste it in the address bar of your preferred browser, then hit “enter” on your keyboard. Your browser should display the Apache Web Server default Webpage, as seen below.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/c4344e8a3d0716759cae14c15990c9a36af41450/Images/Screenshot%202025-01-03%20154800.png)
 
 # YAY Success!
 
