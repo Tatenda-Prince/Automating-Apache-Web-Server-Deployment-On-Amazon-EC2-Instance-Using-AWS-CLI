@@ -148,7 +148,9 @@ mkdir [directory_name]
 
 ## Create bash script
 
-```language sudo vim [script_name.sh]```
+```language 
+sudo vim [script_name.sh]
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/fe86286a86512100011d4ce0ba74136e5529fbed/Images/Screenshot%202025-01-03%20154639.png)
@@ -162,7 +164,9 @@ Refer back to all the retrieved and created resource information from step 2. We
 
 To launch our EC2 Web Server, run the following command —
 
-```language aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]```
+```language
+aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]
+```
 
 
 ## Press [Shift:wq!] to exit out of the outputted info screen.
