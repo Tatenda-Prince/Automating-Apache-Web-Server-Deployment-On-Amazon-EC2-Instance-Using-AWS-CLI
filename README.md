@@ -79,7 +79,9 @@ We need to allow “ssh” traffic on port 22, so we have the capability to secu
 To allow “ssh” on port 22, run the following command —
 
 
-`aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0`
+```language
+aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/98aab621957e215030a8787a86cb9a17d9e486e2/Images/Screenshot%202024-12-23%20154541.png)
@@ -89,7 +91,9 @@ To allow “ssh” on port 22, run the following command —
 To allow “http” on port 80, run the following command —
 
 
-`aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0`
+```language
+aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ea02dd0d012815c6491407c1a869f58f7bcd48b8/Images/Screenshot%202024-12-23%20154800.png)
@@ -104,7 +108,9 @@ Verify that the ports are configured correctly by navigating to your VPCs Securi
 
 # Create an SSH Key Pair
 
-`aws ec2 create-key-pair --key-name [group_name]`
+```language
+aws ec2 create-key-pair --key-name [group_name]
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/373b8732f5f34ab8be5942e48d4f0be07a1c4bac/Images/Screenshot%202024-12-23%20155026.png)
@@ -112,7 +118,9 @@ Verify that the ports are configured correctly by navigating to your VPCs Securi
 
 Verify that the key pair has been created by running the following command to view it —
 
-`aws ec2 describe-key-pairs --key-name [group_name]`
+```language
+aws ec2 describe-key-pairs --key-name [group_name]
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ed0a1dea48c1ad37c9a7a5ffc9c34bbdc87196de/Images/Screenshot%202024-12-23%20155032.png)
@@ -140,7 +148,7 @@ mkdir [directory_name]
 
 ## Create bash script
 
-`sudo vim [script_name.sh]`
+```language sudo vim [script_name.sh]```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/fe86286a86512100011d4ce0ba74136e5529fbed/Images/Screenshot%202025-01-03%20154639.png)
@@ -154,7 +162,7 @@ Refer back to all the retrieved and created resource information from step 2. We
 
 To launch our EC2 Web Server, run the following command —
 
-`aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]`
+```language aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]```
 
 
 ## Press [Shift:wq!] to exit out of the outputted info screen.
