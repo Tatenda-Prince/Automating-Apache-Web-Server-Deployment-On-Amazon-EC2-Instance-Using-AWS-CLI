@@ -18,34 +18,34 @@ You’ve just been hired as a Cloud Engineer for the Up The Chels organization. 
 
 # Prerequisites
 
-An AWS Account and IAM User
+1.An AWS Account and IAM User
 
-Basic working knowledge in the AWS Management Console
+2.Basic working knowledge in the AWS Management Console
 
-Basic Linux command line knowledge in your preferred Linux CLI
+3.Basic Linux command line knowledge in your preferred Linux CLI
 
-sudo privileges on Linux system as non-root user
+4.sudo privileges on Linux system as non-root user
 
-Basic working knowledge of Vim
+5.Basic working knowledge of Vim
 
 # Step 1: Retrieve and create resources to launch EC2
 
 Before we can launch a new Amazon EC2 Instance, we have to retrieve specific resource information from our AWS account which we will use to configure our EC2 Instance. We will also create some resources before we can retrieve further information. The resources needed for our task are listed below —
 
-VPC ID — ID of virtual network dedicated to your AWS account
+1.VPC ID — ID of virtual network dedicated to your AWS account
 
-AMI ID — ID for specific template that contains software configuration to launch or EC2 Instance
+2.AMI ID — ID for specific template that contains software configuration to launch or EC2 Instance
 
-Security Group ID — ID for Firewall that controls ingress and egress network traffic to EC2 Instance
+3.Security Group ID — ID for Firewall that controls ingress and egress network traffic to EC2 Instance
 
-Key Pair Name — name of key pair used to give us programmatic access to our AWS resources
+4.Key Pair Name — name of key pair used to give us programmatic access to our AWS resources
 
 # Retrieve VPC ID
 
 To retrieve our VPC ID, run the following command —
-
+```language
 aws ec2 describe-vpcs 
-
+```
 Your screen should display the current configurations of your VPCs. Locate and note the “VpcId” of the VPC where you will launch the EC2 Instance, as seen below.
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/8d244c3c8c937c59c2387f9622c9996d5449378a/Images/Screenshot%202024-12-23%20153836.png)
@@ -56,8 +56,10 @@ We need to create a new Security Group in our VPC to use with our EC2 Instance t
 
 To create a new Security group, run the following command —
 
+```language
 aws ec2 create-security-group --group-name [group_name] --description "[group_description]"
 --vpc-id [vpc_id]
+```
 
 Copy and save the Security Group ID displayed in your Linux CLI after running the command, as seen below.
 
@@ -76,7 +78,8 @@ We need to allow “ssh” traffic on port 22, so we have the capability to secu
 
 To allow “ssh” on port 22, run the following command —
 
-aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+`aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 22 --cidr 0.0.0.0/0`
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/98aab621957e215030a8787a86cb9a17d9e486e2/Images/Screenshot%202024-12-23%20154541.png)
@@ -86,7 +89,7 @@ aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protoc
 To allow “http” on port 80, run the following command —
 
 
-aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0
+`aws ec2 authorize-security-group-ingress --group-id [security_group_id] --protocol tcp --port 80 --cidr 0.0.0.0/0`
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ea02dd0d012815c6491407c1a869f58f7bcd48b8/Images/Screenshot%202024-12-23%20154800.png)
@@ -101,13 +104,15 @@ Verify that the ports are configured correctly by navigating to your VPCs Securi
 
 # Create an SSH Key Pair
 
-aws ec2 create-key-pair --key-name [group_name]
+`aws ec2 create-key-pair --key-name [group_name]`
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/373b8732f5f34ab8be5942e48d4f0be07a1c4bac/Images/Screenshot%202024-12-23%20155026.png)
 
 
 Verify that the key pair has been created by running the following command to view it —
+
+`aws ec2 describe-key-pairs --key-name [group_name]`
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/ed0a1dea48c1ad37c9a7a5ffc9c34bbdc87196de/Images/Screenshot%202024-12-23%20155032.png)
@@ -127,14 +132,15 @@ Now let’s progress onto step 2.
 
 We need to install an Apache Web Server on our EC2 Instance to enable it to serve HTTP content over the internet to our browsers. To accomplish this, we have to create a bash script to install, enable and start an Apache Web Server through bootstrapping the EC2 Instance. Bootstrapping refers to the process of adding scripts to an EC2 Instance’s user data to be executed when the instance starts.
 
-1.mkdir [directory_name]
+```language
+mkdir [directory_name]
 
+ cd [directory_name]
+```
 
-2. cd [directory_name]
+## Create bash script
 
-# Create bash script
-
-sudo vim [script_name.sh]
+`sudo vim [script_name.sh]`
 
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI/blob/fe86286a86512100011d4ce0ba74136e5529fbed/Images/Screenshot%202025-01-03%20154639.png)
@@ -148,10 +154,10 @@ Refer back to all the retrieved and created resource information from step 2. We
 
 To launch our EC2 Web Server, run the following command —
 
-aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]
+`aws ec2 run-instances --image-id [ami_id] --count 1 --instance-type t2.micro --key-name [key_pair_name] --security-group-ids [security_group_id] --user-data file://[script_name.sh]`
 
 
-Press "Shift:wq!" to exit out of the outputted info screen.
+## Press [Shift:wq!] to exit out of the outputted info screen.
 
 Now verify that the EC2 Instance was created by navigating to the EC2 Instance dashboard in the AWS Management Console. You should see the newly launched EC2 Web Server, as seen below. Give it a few minutes for the instance state to change to “Running”.
 
