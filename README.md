@@ -1,4 +1,4 @@
-# Automating-Apache-Web-Server-Deployment-On-Amazon-EC2-Instance-Using-AWS-CLI
+# Automated Apache Web Server Deployment on EC2 with AWS CLI
 
 "Saving Time with AWS CLI" 
 
